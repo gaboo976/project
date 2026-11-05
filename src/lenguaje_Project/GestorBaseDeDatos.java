@@ -34,6 +34,17 @@ public class GestorBaseDeDatos {
     public ArrayList<Turno> obtenerTurnos() {
         return listaTurnos;
     }
+    public void vaciarBaseDeDatos() {
+        // Vacía las listas en memoria
+        listaPersonas.clear();
+        listaMascotas.clear();
+        listaTurnos.clear();
+        listaHistorias.clear();
+        
+        // Sobrescribe el archivo con las listas vacías
+        guardarDatos();
+        System.out.println("Base de datos reiniciada con éxito.");
+    }
 
     // --- MOTOR DE SERIALIZACIÓN (EL NÚCLEO DE TU DB) ---
     private void guardarDatos() {
