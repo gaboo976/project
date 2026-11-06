@@ -1,5 +1,4 @@
 package lenguaje_Project;
-package lenguaje_Project;
 
 import java.io.Serializable;
 import java.time.LocalDate;

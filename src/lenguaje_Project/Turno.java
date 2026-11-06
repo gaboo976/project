@@ -3,7 +3,10 @@ package lenguaje_Project;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Turno {
+// MODIFICADO en la copia de la GUI: implements Serializable (sin esto no se podía guardar).
+public class Turno implements java.io.Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private LocalDate fecha;
     private LocalTime hora;

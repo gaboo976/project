@@ -11,6 +11,12 @@ public abstract class Mascota implements Serializable {
     private double peso;
     private String raza;
     private Dueño dueño;
+    // MODIFICADO en la copia de la GUI: composición con la historia clínica (el UML la pide)
+    private final HistoriaClinica historia = new HistoriaClinica(this);
+
+    public HistoriaClinica getHistoria() {
+        return historia;
+    }
 
     public Mascota(String nombre, int edad, double peso, String raza, Dueño dueño) {
         setNombre(nombre);
